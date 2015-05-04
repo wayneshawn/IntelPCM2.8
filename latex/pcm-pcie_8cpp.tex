@@ -1,0 +1,76 @@
+\section{pcm-\/pcie.cpp File Reference}
+\label{pcm-pcie_8cpp}\index{pcm-\/pcie.\+cpp@{pcm-\/pcie.\+cpp}}
+
+
+Example of using uncore C\+Bo counters\+: implements a performance counter monitoring utility for monitoring P\+C\+Ie bandwidth.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}cpucounters.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf P\+C\+Ie\+Events\+\_\+t}
+\item 
+struct {\bf sample\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries H\+A\+C\+K\+\_\+\+T\+O\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+E\+R\+R\+O\+R}\label{pcm-pcie_8cpp_ac4eeb11d89b0f517835a12a04443ebe4}
+
+\item 
+\#define {\bfseries P\+C\+M\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T}~1.\+0\label{pcm-pcie_8cpp_aa9ecc55c90c7a69729babc4f5f91ed96}
+
+\item 
+\#define {\bfseries P\+C\+M\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+M\+I\+N}~0.\+015\label{pcm-pcie_8cpp_acccbe8441d6dd75bdc949f5f0ee126c5}
+
+\item 
+\#define {\bfseries P\+C\+M\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L}~50\label{pcm-pcie_8cpp_a433dde946b6713059756318598c9a6fe}
+
+\item 
+\#define {\bfseries N\+U\+M\+\_\+\+S\+A\+M\+P\+L\+E\+S}~(1)\label{pcm-pcie_8cpp_af0b23eedf2352de4c1eff77e1401730c}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries get\+P\+C\+Ie\+Events} ({\bf P\+C\+M} $\ast$m, P\+C\+M\+::\+P\+C\+Ie\+Event\+Code opcode, uint32 delay\+\_\+ms, {\bf sample\+\_\+t} $\ast$sample, const uint32 tid=0)\label{pcm-pcie_8cpp_aa8c99791d2e27465fefdb7c2f8bbabd1}
+
+\item 
+void {\bfseries print\+\_\+events} ()\label{pcm-pcie_8cpp_a3193d1a8ca2451055cda0dc7cb39b71d}
+
+\item 
+void {\bfseries print\+\_\+usage} (const string progname)\label{pcm-pcie_8cpp_a4e43544978d9afb2faf08dce11cab70c}
+
+\item 
+int {\bfseries main} (int argc, char $\ast$argv[$\,$])\label{pcm-pcie_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf P\+C\+Ie\+Events\+\_\+t} {\bfseries aggregate\+\_\+sample}\label{pcm-pcie_8cpp_a8d06403fc15f27838a1ddb92d5413497}
+
+\item 
+uint32 {\bfseries num\+\_\+events} = (sizeof({\bf P\+C\+Ie\+Events\+\_\+t})/sizeof(uint64))\label{pcm-pcie_8cpp_a9ac6c39dd8f3e56144ef3c7259aa402a}
+
+\item 
+const uint32 {\bfseries max\+\_\+sockets} = 4\label{pcm-pcie_8cpp_a7ef99323bd02eadd1f92faf654a892be}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Example of using uncore C\+Bo counters\+: implements a performance counter monitoring utility for monitoring P\+C\+Ie bandwidth. 
+

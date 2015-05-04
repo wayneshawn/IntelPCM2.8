@@ -1,0 +1,70 @@
+\section{pcm-\/tsx.cpp File Reference}
+\label{pcm-tsx_8cpp}\index{pcm-\/tsx.\+cpp@{pcm-\/tsx.\+cpp}}
+
+
+Example of using C\+P\+U counters\+: implements a performance counter monitoring utility for Intel Transactional Synchronization Extensions.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include $<$sys/time.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}cpucounters.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf T\+S\+X\+Event}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries H\+A\+C\+K\+\_\+\+T\+O\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+E\+R\+R\+O\+R}\label{pcm-tsx_8cpp_ac4eeb11d89b0f517835a12a04443ebe4}
+
+\item 
+\#define {\bfseries P\+C\+M\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T}~1.\+0\label{pcm-tsx_8cpp_aa9ecc55c90c7a69729babc4f5f91ed96}
+
+\item 
+\#define {\bfseries P\+C\+M\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+M\+I\+N}~0.\+015\label{pcm-tsx_8cpp_acccbe8441d6dd75bdc949f5f0ee126c5}
+
+\item 
+\#define {\bfseries P\+C\+M\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L}~50\label{pcm-tsx_8cpp_a433dde946b6713059756318598c9a6fe}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries print\+\_\+usage} (const string progname)\label{pcm-tsx_8cpp_a4e43544978d9afb2faf08dce11cab70c}
+
+\item 
+{\footnotesize template$<$class State\+Type $>$ }\\void {\bfseries print\+\_\+basic\+\_\+stats} (const State\+Type \&Before\+State, const State\+Type \&After\+State, bool csv)\label{pcm-tsx_8cpp_a5ded5e5cf069617e10262bf55eef2755}
+
+\item 
+{\footnotesize template$<$class State\+Type $>$ }\\void {\bfseries print\+\_\+custom\+\_\+stats} (const State\+Type \&Before\+State, const State\+Type \&After\+State, bool csv)\label{pcm-tsx_8cpp_a50e3da3c8c576ec27ac14afcb226717f}
+
+\item 
+int {\bfseries find\+Event} (const char $\ast$name)\label{pcm-tsx_8cpp_a6c01bd81dd058f924885a7ba93c94dcc}
+
+\item 
+int {\bfseries main} (int argc, char $\ast$argv[$\,$])\label{pcm-tsx_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf T\+S\+X\+Event} {\bfseries event\+Definition} [$\,$]\label{pcm-tsx_8cpp_af6afa6575f1849ca84ef80ff04ba6e0a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Example of using C\+P\+U counters\+: implements a performance counter monitoring utility for Intel Transactional Synchronization Extensions. 
+

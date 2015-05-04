@@ -1,0 +1,90 @@
+\section{utils.\+h File Reference}
+\label{utils_8h}\index{utils.\+h@{utils.\+h}}
+
+
+Some common utility routines.  
+
+
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include \char`\"{}cpucounters.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$csignal$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf null\+\_\+stream}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries P\+C\+M\+\_\+\+U\+N\+U\+S\+E\+D}(x)~(void)(x)\label{utils_8h_ab31bf3c650c18b5feb1a583596241964}
+
+\item 
+\#define {\bfseries P\+C\+M\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+A\+S\+S\+E\+R\+T}(condition)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf exit\+\_\+cleanup} (void)\label{utils_8h_ad7f085309ae89de98d2f3755d6b00d6a}
+
+\begin{DoxyCompactList}\small\item\em handler of exit() call \end{DoxyCompactList}\item 
+void {\bf set\+\_\+signal\+\_\+handlers} (void)\label{utils_8h_a1d883de13538e72a0f69118e5ae55785}
+
+\begin{DoxyCompactList}\small\item\em install various handlers for system signals \end{DoxyCompactList}\item 
+void {\bf restore\+\_\+signal\+\_\+handlers} (void)\label{utils_8h_a3200cdd5e1d5f53a4dbecaaf4f01f71d}
+
+\begin{DoxyCompactList}\small\item\em Restores default signal handlers under Linux/\+U\+N\+I\+X. \end{DoxyCompactList}\item 
+void {\bf sig\+I\+N\+T\+\_\+handler} (int signum)\label{utils_8h_afc1a4d527493068f7670f237fc448bb8}
+
+\begin{DoxyCompactList}\small\item\em handles signals that lead to termination of the program such as S\+I\+G\+I\+N\+T, S\+I\+G\+Q\+U\+I\+T, S\+I\+G\+A\+B\+R\+T, S\+I\+G\+S\+E\+G\+V, S\+I\+G\+T\+E\+R\+M, S\+I\+G\+C\+H\+L\+D this function specifically works when the client aplication launched by pcm -- terminates \end{DoxyCompactList}\item 
+void {\bf sig\+H\+U\+P\+\_\+handler} (int signum)\label{utils_8h_a7d1a3c6ec6cd83bf6b08c7d2d085b165}
+
+\begin{DoxyCompactList}\small\item\em handles signals that lead to restart the application such as S\+I\+G\+H\+U\+P. for example to re-\/read environment variables controlling \doxyref{P\+C\+M}{p.}{classPCM} execution \end{DoxyCompactList}\item 
+void {\bf sig\+U\+S\+R\+\_\+handler} (int signum)\label{utils_8h_a067c6080c8b6b276419933d8fc8990be}
+
+\begin{DoxyCompactList}\small\item\em handles signals that lead to update of configuration such as S\+I\+G\+U\+S\+R1 and S\+I\+G\+U\+S\+R2. for the future extensions \end{DoxyCompactList}\item 
+void {\bf sig\+S\+T\+O\+P\+\_\+handler} (int signum)\label{utils_8h_a31614f993e86b671fc8775249db1f178}
+
+\begin{DoxyCompactList}\small\item\em handles signals that lead to update of configuration such as S\+I\+G\+S\+T\+O\+P, S\+I\+G\+T\+S\+T\+P, S\+I\+G\+T\+T\+I\+N, S\+I\+G\+T\+T\+O\+U \end{DoxyCompactList}\item 
+void {\bf sig\+C\+O\+N\+T\+\_\+handler} (int signum)\label{utils_8h_ad5a1c533ebe0b5dbb843c32300f1df5f}
+
+\begin{DoxyCompactList}\small\item\em handles signals that lead to update of configuration such as S\+I\+G\+C\+O\+N\+T \end{DoxyCompactList}\item 
+void {\bfseries My\+Sleep} (int delay)\label{utils_8h_a9676f5a7c7b26e3a05f1da74b9f7446b}
+
+\item 
+void {\bfseries My\+Sleep\+Ms} (int delay\+\_\+ms)\label{utils_8h_a2e28907cbb9ee62d131740fc2a2ce343}
+
+\item 
+void {\bfseries My\+Sleep\+Us} (int delay\+\_\+us)\label{utils_8h_addcc13863c5f11bd3a78860c1eefaeeb}
+
+\item 
+void {\bf My\+System} (char $\ast$sys\+Cmd, char $\ast$$\ast$argc)\label{utils_8h_a7554cbdafa9da0f374648381a31e2522}
+
+\begin{DoxyCompactList}\small\item\em launches external program in a separate process \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Int\+Type $>$ }\\std\+::string {\bfseries unit\+\_\+format} (Int\+Type n)\label{utils_8h_ac9e4fa3f602d7b1c3fc6c84db398d30d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Some common utility routines. 
+
+
+
+\subsection{Macro Definition Documentation}
+\index{utils.\+h@{utils.\+h}!P\+C\+M\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+A\+S\+S\+E\+R\+T@{P\+C\+M\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+A\+S\+S\+E\+R\+T}}
+\index{P\+C\+M\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+A\+S\+S\+E\+R\+T@{P\+C\+M\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+A\+S\+S\+E\+R\+T}!utils.\+h@{utils.\+h}}
+\subsubsection[{P\+C\+M\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+A\+S\+S\+E\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+C\+M\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+A\+S\+S\+E\+R\+T(
+\begin{DoxyParamCaption}
+\item[{}]{condition}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a0ce57e0df045ade600cc32dc72cdd2e2}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typedef} \textcolor{keywordtype}{char} pcm\_compile\_assert\_failed [ (condition) ? 1 : -1 ]; \(\backslash\)
+   pcm\_compile\_assert\_failed pcm\_compile\_assert\_failed\_; \(\backslash\)
+   PCM\_UNUSED(pcm\_compile\_assert\_failed\_);
+\end{DoxyCode}

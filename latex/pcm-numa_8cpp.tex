@@ -1,0 +1,53 @@
+\section{pcm-\/numa.cpp File Reference}
+\label{pcm-numa_8cpp}\index{pcm-\/numa.\+cpp@{pcm-\/numa.\+cpp}}
+
+
+Example of using C\+P\+U counters\+: implements a performance counter monitoring utility for N\+U\+M\+A (remote and local memory accesses counting). Example for programming offcore response events.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include $<$sys/time.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}cpucounters.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries H\+A\+C\+K\+\_\+\+T\+O\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+E\+R\+R\+O\+R}\label{pcm-numa_8cpp_ac4eeb11d89b0f517835a12a04443ebe4}
+
+\item 
+\#define {\bfseries P\+C\+M\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T}~1.\+0\label{pcm-numa_8cpp_aa9ecc55c90c7a69729babc4f5f91ed96}
+
+\item 
+\#define {\bfseries P\+C\+M\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+M\+I\+N}~0.\+015\label{pcm-numa_8cpp_acccbe8441d6dd75bdc949f5f0ee126c5}
+
+\item 
+\#define {\bfseries P\+C\+M\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L}~50\label{pcm-numa_8cpp_a433dde946b6713059756318598c9a6fe}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries print\+\_\+usage} (const string progname)\label{pcm-numa_8cpp_a4e43544978d9afb2faf08dce11cab70c}
+
+\item 
+{\footnotesize template$<$class State\+Type $>$ }\\void {\bfseries print\+\_\+stats} (const State\+Type \&Before\+State, const State\+Type \&After\+State, bool csv)\label{pcm-numa_8cpp_a7243fae61218414d06c7c36701bdae9d}
+
+\item 
+int {\bfseries main} (int argc, char $\ast$argv[$\,$])\label{pcm-numa_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Example of using C\+P\+U counters\+: implements a performance counter monitoring utility for N\+U\+M\+A (remote and local memory accesses counting). Example for programming offcore response events. 
+

@@ -1,0 +1,256 @@
+\section{Server\+Uncore\+Power\+State Class Reference}
+\label{classServerUncorePowerState}\index{Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}}
+
+
+Server uncore power counter state.  
+
+
+
+
+{\ttfamily \#include $<$cpucounters.\+h$>$}
+
+Inheritance diagram for Server\+Uncore\+Power\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classServerUncorePowerState}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32 {\bf get\+Package\+Thermal\+Headroom} () const \label{classServerUncorePowerState_a2680b28b8d92da4cf74a3a1c59bf7c1d}
+
+\begin{DoxyCompactList}\small\item\em Returns current thermal headroom below Tj\+Max. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries P\+C\+M}\label{classServerUncorePowerState_ab5f56d2e95ba3daf52c17b8a1d356d64}
+
+\item 
+{\footnotesize template$<$class Counter\+State\+Type $>$ }\\uint64 {\bf get\+Q\+P\+I\+Clocks} (uint32 port, const Counter\+State\+Type \&before, const Counter\+State\+Type \&after)
+\begin{DoxyCompactList}\small\item\em Returns Q\+P\+I L\+L clock ticks. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Counter\+State\+Type $>$ }\\uint64 {\bf get\+Q\+P\+I\+L0p\+Tx\+Cycles} (uint32 port, const Counter\+State\+Type \&before, const Counter\+State\+Type \&after)
+\begin{DoxyCompactList}\small\item\em Returns the number of Q\+P\+I cycles in power saving half-\/lane mode. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Counter\+State\+Type $>$ }\\uint64 {\bf get\+Q\+P\+I\+L1\+Cycles} (uint32 port, const Counter\+State\+Type \&before, const Counter\+State\+Type \&after)
+\begin{DoxyCompactList}\small\item\em Returns the number of Q\+P\+I cycles in power saving shutdown mode. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Counter\+State\+Type $>$ }\\uint64 {\bf get\+D\+R\+A\+M\+Clocks} (uint32 channel, const Counter\+State\+Type \&before, const Counter\+State\+Type \&after)
+\begin{DoxyCompactList}\small\item\em Returns D\+R\+A\+M clock ticks. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Counter\+State\+Type $>$ }\\uint64 {\bf get\+M\+C\+Counter} (uint32 channel, uint32 counter, const Counter\+State\+Type \&before, const Counter\+State\+Type \&after)
+\begin{DoxyCompactList}\small\item\em Direct read of memory controller P\+M\+U counter (counter meaning depends on the programming\+: power/performance/etc) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Counter\+State\+Type $>$ }\\uint64 {\bf get\+P\+C\+U\+Counter} (uint32 counter, const Counter\+State\+Type \&before, const Counter\+State\+Type \&after)
+\begin{DoxyCompactList}\small\item\em Direct read of power control unit P\+M\+U counter (counter meaning depends on the programming\+: power/performance/etc) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Counter\+State\+Type $>$ }\\uint64 {\bf get\+Consumed\+Energy} (const Counter\+State\+Type \&before, const Counter\+State\+Type \&after)
+\begin{DoxyCompactList}\small\item\em Returns energy consumed by processor, exclusing D\+R\+A\+M (measured in internal units) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Counter\+State\+Type $>$ }\\uint64 {\bf get\+D\+R\+A\+M\+Consumed\+Energy} (const Counter\+State\+Type \&before, const Counter\+State\+Type \&after)
+\begin{DoxyCompactList}\small\item\em Returns energy consumed by D\+R\+A\+M (measured in internal units) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Counter\+State\+Type $>$ }\\uint64 {\bf get\+Invariant\+T\+S\+C} (const Counter\+State\+Type \&before, const Counter\+State\+Type \&after)
+\begin{DoxyCompactList}\small\item\em Computes number of invariant time stamp counter ticks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Server uncore power counter state. 
+
+\subsection{Friends And Related Function Documentation}
+\index{Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}!get\+Consumed\+Energy@{get\+Consumed\+Energy}}
+\index{get\+Consumed\+Energy@{get\+Consumed\+Energy}!Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}}
+\subsubsection[{get\+Consumed\+Energy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Counter\+State\+Type $>$ uint64 get\+Consumed\+Energy (
+\begin{DoxyParamCaption}
+\item[{const Counter\+State\+Type \&}]{before, }
+\item[{const Counter\+State\+Type \&}]{after}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classServerUncorePowerState_a054b949f09283093e1923affa4e58ae8}
+
+
+Returns energy consumed by processor, exclusing D\+R\+A\+M (measured in internal units) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em before} & C\+P\+U counter state before the experiment \\
+\hline
+{\em after} & C\+P\+U counter state after the experiment \\
+\hline
+\end{DoxyParams}
+\index{Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}!get\+D\+R\+A\+M\+Clocks@{get\+D\+R\+A\+M\+Clocks}}
+\index{get\+D\+R\+A\+M\+Clocks@{get\+D\+R\+A\+M\+Clocks}!Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}}
+\subsubsection[{get\+D\+R\+A\+M\+Clocks}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Counter\+State\+Type $>$ uint64 get\+D\+R\+A\+M\+Clocks (
+\begin{DoxyParamCaption}
+\item[{uint32}]{channel, }
+\item[{const Counter\+State\+Type \&}]{before, }
+\item[{const Counter\+State\+Type \&}]{after}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classServerUncorePowerState_aeb1baf7feb391c0512dc378a9fd66a17}
+
+
+Returns D\+R\+A\+M clock ticks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & D\+R\+A\+M channel number \\
+\hline
+{\em before} & C\+P\+U counter state before the experiment \\
+\hline
+{\em after} & C\+P\+U counter state after the experiment \\
+\hline
+\end{DoxyParams}
+\index{Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}!get\+D\+R\+A\+M\+Consumed\+Energy@{get\+D\+R\+A\+M\+Consumed\+Energy}}
+\index{get\+D\+R\+A\+M\+Consumed\+Energy@{get\+D\+R\+A\+M\+Consumed\+Energy}!Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}}
+\subsubsection[{get\+D\+R\+A\+M\+Consumed\+Energy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Counter\+State\+Type $>$ uint64 get\+D\+R\+A\+M\+Consumed\+Energy (
+\begin{DoxyParamCaption}
+\item[{const Counter\+State\+Type \&}]{before, }
+\item[{const Counter\+State\+Type \&}]{after}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classServerUncorePowerState_a71af0766460ef7dd3d138ec0d0924eda}
+
+
+Returns energy consumed by D\+R\+A\+M (measured in internal units) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em before} & C\+P\+U counter state before the experiment \\
+\hline
+{\em after} & C\+P\+U counter state after the experiment \\
+\hline
+\end{DoxyParams}
+\index{Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}!get\+Invariant\+T\+S\+C@{get\+Invariant\+T\+S\+C}}
+\index{get\+Invariant\+T\+S\+C@{get\+Invariant\+T\+S\+C}!Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}}
+\subsubsection[{get\+Invariant\+T\+S\+C}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Counter\+State\+Type $>$ uint64 get\+Invariant\+T\+S\+C (
+\begin{DoxyParamCaption}
+\item[{const Counter\+State\+Type \&}]{before, }
+\item[{const Counter\+State\+Type \&}]{after}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classServerUncorePowerState_a45cf07a8d3ce2c48968842554a3854f9}
+
+
+Computes number of invariant time stamp counter ticks. 
+
+This counter counts irrespectively of C-\/, P-\/ or T-\/states
+
+
+\begin{DoxyParams}{Parameters}
+{\em before} & C\+P\+U counter state before the experiment \\
+\hline
+{\em after} & C\+P\+U counter state after the experiment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of time stamp counter ticks 
+\end{DoxyReturn}
+\index{Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}!get\+M\+C\+Counter@{get\+M\+C\+Counter}}
+\index{get\+M\+C\+Counter@{get\+M\+C\+Counter}!Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}}
+\subsubsection[{get\+M\+C\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Counter\+State\+Type $>$ uint64 get\+M\+C\+Counter (
+\begin{DoxyParamCaption}
+\item[{uint32}]{channel, }
+\item[{uint32}]{counter, }
+\item[{const Counter\+State\+Type \&}]{before, }
+\item[{const Counter\+State\+Type \&}]{after}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classServerUncorePowerState_aed082cc97dbad35e1633823e582afa0f}
+
+
+Direct read of memory controller P\+M\+U counter (counter meaning depends on the programming\+: power/performance/etc) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em counter} & counter number \\
+\hline
+{\em channel} & channel number \\
+\hline
+{\em before} & C\+P\+U counter state before the experiment \\
+\hline
+{\em after} & C\+P\+U counter state after the experiment \\
+\hline
+\end{DoxyParams}
+\index{Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}!get\+P\+C\+U\+Counter@{get\+P\+C\+U\+Counter}}
+\index{get\+P\+C\+U\+Counter@{get\+P\+C\+U\+Counter}!Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}}
+\subsubsection[{get\+P\+C\+U\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Counter\+State\+Type $>$ uint64 get\+P\+C\+U\+Counter (
+\begin{DoxyParamCaption}
+\item[{uint32}]{counter, }
+\item[{const Counter\+State\+Type \&}]{before, }
+\item[{const Counter\+State\+Type \&}]{after}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classServerUncorePowerState_a3c424ad42d2439410d6ffc371335573d}
+
+
+Direct read of power control unit P\+M\+U counter (counter meaning depends on the programming\+: power/performance/etc) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em counter} & counter number \\
+\hline
+{\em before} & C\+P\+U counter state before the experiment \\
+\hline
+{\em after} & C\+P\+U counter state after the experiment \\
+\hline
+\end{DoxyParams}
+\index{Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}!get\+Q\+P\+I\+Clocks@{get\+Q\+P\+I\+Clocks}}
+\index{get\+Q\+P\+I\+Clocks@{get\+Q\+P\+I\+Clocks}!Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}}
+\subsubsection[{get\+Q\+P\+I\+Clocks}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Counter\+State\+Type $>$ uint64 get\+Q\+P\+I\+Clocks (
+\begin{DoxyParamCaption}
+\item[{uint32}]{port, }
+\item[{const Counter\+State\+Type \&}]{before, }
+\item[{const Counter\+State\+Type \&}]{after}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classServerUncorePowerState_af7d9ba0936d7c305d0cc6c2db296a336}
+
+
+Returns Q\+P\+I L\+L clock ticks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Q\+P\+I port number \\
+\hline
+{\em before} & C\+P\+U counter state before the experiment \\
+\hline
+{\em after} & C\+P\+U counter state after the experiment \\
+\hline
+\end{DoxyParams}
+\index{Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}!get\+Q\+P\+I\+L0p\+Tx\+Cycles@{get\+Q\+P\+I\+L0p\+Tx\+Cycles}}
+\index{get\+Q\+P\+I\+L0p\+Tx\+Cycles@{get\+Q\+P\+I\+L0p\+Tx\+Cycles}!Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}}
+\subsubsection[{get\+Q\+P\+I\+L0p\+Tx\+Cycles}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Counter\+State\+Type $>$ uint64 get\+Q\+P\+I\+L0p\+Tx\+Cycles (
+\begin{DoxyParamCaption}
+\item[{uint32}]{port, }
+\item[{const Counter\+State\+Type \&}]{before, }
+\item[{const Counter\+State\+Type \&}]{after}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classServerUncorePowerState_acdac5d9d7a5a6496d90b0681badc26b3}
+
+
+Returns the number of Q\+P\+I cycles in power saving half-\/lane mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Q\+P\+I port number \\
+\hline
+{\em before} & C\+P\+U counter state before the experiment \\
+\hline
+{\em after} & C\+P\+U counter state after the experiment \\
+\hline
+\end{DoxyParams}
+\index{Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}!get\+Q\+P\+I\+L1\+Cycles@{get\+Q\+P\+I\+L1\+Cycles}}
+\index{get\+Q\+P\+I\+L1\+Cycles@{get\+Q\+P\+I\+L1\+Cycles}!Server\+Uncore\+Power\+State@{Server\+Uncore\+Power\+State}}
+\subsubsection[{get\+Q\+P\+I\+L1\+Cycles}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Counter\+State\+Type $>$ uint64 get\+Q\+P\+I\+L1\+Cycles (
+\begin{DoxyParamCaption}
+\item[{uint32}]{port, }
+\item[{const Counter\+State\+Type \&}]{before, }
+\item[{const Counter\+State\+Type \&}]{after}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classServerUncorePowerState_a580ae4e465d0f8dd93935ad7af28c095}
+
+
+Returns the number of Q\+P\+I cycles in power saving shutdown mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Q\+P\+I port number \\
+\hline
+{\em before} & C\+P\+U counter state before the experiment \\
+\hline
+{\em after} & C\+P\+U counter state after the experiment \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+{\bf cpucounters.\+h}\end{DoxyCompactItemize}
